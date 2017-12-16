@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initalisiere();
     }
 
     public void initalisiere() {
@@ -68,4 +70,6 @@ public class MainActivity extends AppCompatActivity {
         tv_stunden.setText(pref.getString("Stunden", "0 Stunden"));
         tv_summe.setText(pref.getString("Summe", "0 Euro"));
     }
+
+
 }
